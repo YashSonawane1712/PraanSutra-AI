@@ -68,5 +68,5 @@ Use **Power BI** connected to MongoDB to display:
 
 Enables healthcare providers to focus on preventive strategies for high-risk populations.
 
-## Jury Takeaway Flow 🩺
+## Flow 🩺
 **Data Capture (Kaggle + NFHS) → Store (MongoDB) → Process (Python/dbt) → Analyze (ML Models) → Visualize (Power BI)**
