@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Predictive Patient Risk Report</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f7f9fc; }
+        h1, h2 { color: #2b4c7e; }
+        table { border-collapse: collapse; width: 80%; margin: 20px 0; }
+        th, td { border: 1px solid #aaa; padding: 8px; text-align: center; }
+        th { background-color: #dde7f0; }
+        img { max-width: 600px; margin-top: 15px; border-radius: 10px; box-shadow: 0 0 8px rgba(0,0,0,0.2); }
+        .highlight { background-color: #eaf4ff; padding: 10px; border-left: 5px solid #2b4c7e; }
+    </style>
+</head>
+<body>
+    <h1>Predictive Patient Risk Report</h1>
+
+    <div class="highlight">
+        <h2>Model Performance</h2>
+        <p><b>Accuracy:</b> 98.54 %</p>
+    </div>
+
+    <h2>Confusion Matrix</h2>
+    <img src="confusion_matrix.png" alt="Confusion Matrix">
+
+    <h2>Classification Report</h2>
+    <table>
+        <tr><th>Class</th><th>Precision</th><th>Recall</th><th>F1-score</th><th>Support</th></tr>
+        
+        <tr>
+            <td>0</td>
+            <td>0.97</td>
+            <td>1.0</td>
+            <td>0.99</td>
+            <td>102.0</td>
+        </tr>
+        
+        <tr>
+            <td>1</td>
+            <td>1.0</td>
+            <td>0.97</td>
+            <td>0.99</td>
+            <td>103.0</td>
+        </tr>
+        
+    </table>
+
+    <h2>Risk Probability Distribution</h2>
+    <img src="risk_distribution.png" alt="Risk Distribution">
+
+    <h2>Sample Predicted Patient Risks</h2>
+    <table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th>age</th>
+      <th>sex</th>
+      <th>cp</th>
+      <th>trestbps</th>
+      <th>chol</th>
+      <th>fbs</th>
+      <th>restecg</th>
+      <th>thalach</th>
+      <th>exang</th>
+      <th>oldpeak</th>
+      <th>slope</th>
+      <th>ca</th>
+      <th>thal</th>
+      <th>Risk_Prediction</th>
+      <th>Risk_Probability</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>58</td>
+      <td>1</td>
+      <td>2</td>
+      <td>130</td>
+      <td>250</td>
+      <td>0</td>
+      <td>1</td>
+      <td>160</td>
+      <td>0</td>
+      <td>1.0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>2</td>
+      <td>1</td>
+      <td>0.794708</td>
+    </tr>
+    <tr>
+      <td>45</td>
+      <td>0</td>
+      <td>3</td>
+      <td>120</td>
+      <td>210</td>
+      <td>0</td>
+      <td>0</td>
+      <td>180</td>
+      <td>0</td>
+      <td>0.2</td>
+      <td>2</td>
+      <td>0</td>
+      <td>3</td>
+      <td>1</td>
+      <td>0.985939</td>
+    </tr>
+    <tr>
+      <td>63</td>
+      <td>1</td>
+      <td>1</td>
+      <td>140</td>
+      <td>260</td>
+      <td>1</td>
+      <td>1</td>
+      <td>150</td>
+      <td>1</td>
+      <td>2.3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0.025513</td>
+    </tr>
+  </tbody>
+</table>
+
+    <p><i>Report auto-generated using Python (XGBoost, Pandas, Matplotlib, Seaborn, Jinja2)</i></p>
+</body>
+</html>
